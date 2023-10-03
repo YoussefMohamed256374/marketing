@@ -1,0 +1,69 @@
+@use '../variables/colors' as *;
+@use '../mixin/mixin' as *;
+
+/* meet start */
+.meet {
+  background: $dark-white;
+  .box-container {
+    @include grid(27rem, 3rem);
+    padding-top: 3rem;
+    .box {
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        h3 {
+          font-size: 3rem;
+          color: $Radical-Red;
+          padding-top: 1.5rem;
+        }
+        span {
+          @include titleText(2rem);
+          font-weight: bold;
+          padding: 3rem 0;
+        }
+        p {
+          @include graphText(2rem);
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+/* meet end */
+
+/* business start */
+.business {
+  background: $dark-white;
+  .box-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+    .box {
+      flex: 1 1 40rem;
+      display: flex;
+      gap: 2rem;
+      .content {
+        h3 {
+          @include titleText(3rem);
+        }
+        p {
+          @include graphText(2rem);
+          padding: 2rem 0;
+          width: 100%;
+        }
+        span {
+          font-size: 1.8rem;
+          color: $Radical-Red;
+        }
+      }
+    }
+  }
+}
+/* business end */

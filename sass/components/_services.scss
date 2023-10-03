@@ -1,0 +1,31 @@
+@use '../variables/colors' as *;
+@use '../mixin/mixin' as *;
+.services {
+	background: url(../images/services-bg.png) no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	.box-container {
+		@include grid(35rem, 5rem) ;
+		padding: 5rem 0;
+		.box {
+			width: 100%;
+			display: flex;
+			gap: 2rem;
+			flex-direction: column;
+			padding-top: 3rem 0;
+			.flex {
+				display: flex;
+				gap: 1rem;
+				align-items: flex-start;
+				justify-content: left;
+				h3 {
+					@include titleText(3rem);
+				}
+			}
+			p {
+				@include graphText(2rem);
+			}
+		}
+	}
+}

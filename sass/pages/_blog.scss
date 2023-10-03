@@ -1,0 +1,35 @@
+@use '../variables/colors' as *;
+@use '../mixin/mixin' as *;
+
+/* blog start */
+.blog {
+  background: $dark-white;
+  .box-container {
+    @include grid(40rem, 3rem);
+    .box {
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+      .content {
+        span {
+          color: $Bright-Grey;
+          font-size: 1.5rem;
+          i {
+            padding-right: 1rem;
+          }
+        }
+        h3 {
+          @include titleText(2.5rem);
+          padding: 2rem 0;
+        }
+        p {
+          @include graphText(2rem);
+          letter-spacing: 0.1rem;
+        }
+      }
+    }
+  }
+}
+/* blog end */

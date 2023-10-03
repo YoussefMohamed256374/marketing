@@ -1,0 +1,93 @@
+@use '../variables/colors' as *;
+@use '../mixin/mixin' as *;
+
+/* footer start */
+.footer {
+	background: url(../images/footer.png) no-repeat;
+	background-position: bottom;
+
+	.box-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+		gap: 2rem;
+		padding-bottom: 16rem;
+
+		.box {
+			a {
+				font-size: 4rem;
+				color: $Bright-Grey;
+				font-weight: 300;
+				img {
+					width: 3rem;
+				}
+				strong {
+					font-weight: bold;
+				}
+			}
+			h3 {
+				@include titleText(2.2rem);
+				padding: 1rem 0;
+			}
+
+			.share {
+				margin-top: 1rem;
+
+				a {
+					height: 4.5rem;
+					width: 4.5rem;
+					line-height: 4.5rem;
+					font-size: 1.7rem;
+					color: $white;
+					background: rgba(58, 58, 80, 0.4);
+					border-radius: 50%;
+					margin-right: 0.3rem;
+					text-align: center;
+
+					&:hover {
+						background: $Radical-Red;
+					}
+				}
+			}
+
+			.link {
+				@include graphText(1.7rem);
+				padding: 0.5rem 0;
+				display: block;
+				font-weight: 400;
+				color: $Bright-Grey;
+
+				&:hover {
+					color: $Radical-Red;
+					text-decoration: underline;
+				}
+			}
+
+			p {
+				@include graphText(1.8rem);
+				padding: 1rem 0;
+			}
+
+			.email {
+				width: 100%;
+				padding: 1.2rem 1.4rem;
+				font-size: 1.6rem;
+				margin-bottom: 1rem;
+				background: $dark-white;
+			}
+		}
+	}
+
+	.credit {
+		text-align: center;
+		margin-top: 3rem;
+		padding-top: 3rem;
+		font-size: 2rem;
+		font-weight: 500;
+		color: $white;
+
+		span {
+			color: $Radical-Red;
+		}
+	}
+}
+/* footer end */

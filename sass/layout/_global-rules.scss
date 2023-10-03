@@ -1,0 +1,91 @@
+@use '../variables/colors' as *;
+@use '../mixin/mixin' as *;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&display=swap');
+
+* {
+  font-family: 'Source Sans 3', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s ease-out;
+
+  &::selection {
+    background: $Bright-Grey;
+    color: $white;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $Radical-Red;
+  }
+}
+
+section {
+  padding: 5rem 10%;
+}
+
+.btn {
+  display: inline-block;
+  color: $white;
+  background: $Radical-Red;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border-radius: 0.3rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  &:hover {
+    color: $Bright-Grey;
+    background: $white;
+  }
+  &.active {
+    background: $white;
+    color: $Bright-Grey;
+    border: 0.1rem solid $Radical-Red;
+  }
+}
+
+.title {
+  @include titleText(5rem);
+  padding: 3rem 0;
+}
+
+.heading {
+  background: $white;
+  padding: 3rem 10%;
+  p {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: $Radical-Red;
+    a {
+      color: $Bright-Grey;
+
+      &:hover {
+        color: $Radical-Red;
+      }
+    }
+    span {
+      padding: 0 1rem;
+    }
+  }
+}
+

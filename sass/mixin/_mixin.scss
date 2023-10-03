@@ -1,0 +1,18 @@
+@use '../variables/colors' as *;
+
+@mixin titleText($titleSize) {
+  font-size: $titleSize;
+  color: $Bright-Grey;
+  line-height: 1.2;
+}
+
+@mixin graphText($graphSize) {
+  font-size: $graphSize;
+  color: $Bright-Grey;
+}
+
+@mixin grid($grid, $gap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($grid, 1fr));
+  gap: $gap;
+}

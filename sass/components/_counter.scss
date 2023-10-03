@@ -1,0 +1,43 @@
+@use '../variables/colors' as *;
+@use '../mixin/mixin' as *;
+
+/* counter start */
+.counter {
+	text-align: center;
+	.title {
+		border-bottom: 0.2rem solid $dark-white;
+	}
+	.box-container {
+		@include grid(25rem, 2rem);
+		padding: 3rem 0;
+		.box {
+			display: grid;
+			gap: 2rem;
+			i {
+				font-size: 6rem;
+				color: $Radical-Red;
+			}
+			span {
+				position: relative;
+				font-size: 4rem;
+				color: $Bright-Grey;
+				font-weight: bold;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 105%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					background: $dark-white;
+					width: 5rem;
+					height: 0.2rem;
+				}
+			}
+			h3 {
+				font-size: 2.5rem;
+				color: $Bright-Grey;
+			}
+		}
+	}
+}
+/* counter end */

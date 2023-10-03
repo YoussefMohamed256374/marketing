@@ -1,0 +1,14 @@
+@use './layout/global-rules';
+@use './components/header';
+@use './components/landing';
+@use './components/gallery';
+@use './components/banner';
+@use './components/services';
+@use './components/counter';
+@use './pages/home';
+@use './pages/about';
+@use './pages/courses';
+@use './pages/blog';
+@use './pages/contacts';
+@use './components/footer';
+@use './media_query/media_query';

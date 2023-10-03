@@ -1,0 +1,40 @@
+@use '../variables/colors' as *;
+@use '../mixin/mixin' as *;
+
+/* banner start */
+.banner {
+	height: 100%;
+  background: $Bright-Grey;
+	.container {
+		text-align: center;
+		padding: 3rem 0;
+		p {
+			font-size: 5rem;
+			color: $Greenish-Cyan;
+			letter-spacing: 0.2rem;
+		}
+		h1 {
+			font-size: 7.5rem;
+			color: $Radical-Red;
+			letter-spacing: 0.2rem;
+			padding-top: 2rem;
+			padding-bottom: 3.5rem;
+		}
+		.buttons {
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+			padding: 3rem 0;
+			.btn {
+				&:last-child {
+					background: $Greenish-Cyan;
+					&:hover {
+						background: $Radical-Red;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}
+/* banner end */
